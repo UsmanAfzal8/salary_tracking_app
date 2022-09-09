@@ -92,6 +92,7 @@ class _MyAppState extends State<MyApp> {
             );
           } else if (snapshot.hasError) {
             MaterialApp(
+              debugShowCheckedModeBanner: false,
               builder: BotToastInit(),
               navigatorObservers: [BotToastNavigatorObserver()],
               home: const Scaffold(
@@ -117,7 +118,7 @@ class _MyAppState extends State<MyApp> {
                   title: 'Wage Me',
                   theme:
                       Styles.themeData(themeChangeProvider.darkTheme, context),
-                  home: UserState(),
+                  home: LoginScreen(),
                   routes: {
                     MainScreens.routeName: (ctx) => const MainScreens(),
                     LoginScreen.routeName: (ctx) => LoginScreen(),

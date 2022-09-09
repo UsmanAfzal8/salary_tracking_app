@@ -41,7 +41,7 @@ class _UserStateState extends State<UserState> {
               print('The user didn\'t login yet');
               return
                   // IntroductionAuthScreen();
-                  LandingPage();
+                  const LandingPage();
             }
           } else if (userSnapshot.hasError) {
             return const Center(
