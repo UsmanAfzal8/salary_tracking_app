@@ -118,7 +118,7 @@ class _MyAppState extends State<MyApp> {
                   title: 'Wage Me',
                   theme:
                       Styles.themeData(themeChangeProvider.darkTheme, context),
-                  home: LoginScreen(),
+                  home: UserState(),
                   routes: {
                     MainScreens.routeName: (ctx) => const MainScreens(),
                     LoginScreen.routeName: (ctx) => LoginScreen(),
