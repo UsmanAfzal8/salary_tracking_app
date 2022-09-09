@@ -149,13 +149,13 @@ class _HomePageState extends State<HomePage> {
                                       ),
                                     ),
                                     actions: <Widget>[
-                                      FlatButton(
+                                      ElevatedButton(
                                         child: const Text('Cancel'),
                                         onPressed: () {
                                           Navigator.of(context).pop();
                                         },
                                       ),
-                                      FlatButton(
+                                      ElevatedButton(
                                         child: const Text('Save'),
                                         onPressed: () {
                                           Navigator.of(context).pop();
@@ -192,7 +192,10 @@ class _HomePageState extends State<HomePage> {
                                 children: [
                                   Padding(
                                     padding: const EdgeInsets.all(8.0),
-                                    child: Text(employeeData.companyName!=null?'${employeeData.companyName!}':'',
+                                    child: Text(
+                                        employeeData.companyName != null
+                                            ? '${employeeData.companyName!}'
+                                            : '',
                                         style:
                                             titleTextStyle(context: context)),
                                   ),

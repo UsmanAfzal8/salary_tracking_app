@@ -427,13 +427,13 @@ class UserResult extends StatelessWidget {
                           keyboardType: TextInputType.number,
                         ),
                         actions: <Widget>[
-                          FlatButton(
+                          ElevatedButton(
                             child: const Text("Close"),
                             onPressed: () {
                               Navigator.of(context).pop();
                             },
                           ),
-                          FlatButton(
+                          ElevatedButton(
                             child: const Text("Update"),
                             onPressed: () {
                               userRef.doc(user.id).update({

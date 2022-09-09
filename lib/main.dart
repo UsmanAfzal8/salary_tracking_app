@@ -110,8 +110,6 @@ class _MyAppState extends State<MyApp> {
               ChangeNotifierProvider(create: (_) {
                 return themeChangeProvider;
               }),
-       
-            
             ],
             child: Consumer<DarkThemeProvider>(
               builder: (context, themeChangeProvider, ch) {
@@ -124,7 +122,7 @@ class _MyAppState extends State<MyApp> {
                     MainScreens.routeName: (ctx) => const MainScreens(),
                     LoginScreen.routeName: (ctx) => LoginScreen(),
                     SignUpScreen.routeName: (ctx) => SignUpScreen(),
-                    BottomBarScreen.routeName: (ctx) => BottomBarScreen(),
+                    BottomBarScreen.routeName: (ctx) => const BottomBarScreen(),
                     ForgetPassword.routeName: (ctx) => ForgetPassword(),
                   },
                 );
