@@ -73,7 +73,12 @@ class _LoginScreenState extends State<LoginScreen> {
               : Expanded(
                   child: Container(
                     height: heightsize,
-                    color: Colors.blue,
+                    decoration: const BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(40),
+                          bottomRight: Radius.circular(40),
+                        )),
                     child: Center(
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -111,7 +116,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 SingleChildScrollView(
                   child: Container(
                     height: heightsize,
-                    color: Colors.blue,
+                    color: ResponsiveWidget.isSmallScreen(context)
+                        ? Colors.blue
+                        : Colors.white,
                     child: Column(
                       children: [
                         Padding(
@@ -124,7 +131,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                 'Welcome!',
                                 style: TextStyle(
                                   fontSize: heightsize * 0.06,
-                                  color: Colors.white,
+                                  color: ResponsiveWidget.isSmallScreen(context)
+                                      ? Colors.white
+                                      : Colors.black,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
@@ -135,8 +144,11 @@ class _LoginScreenState extends State<LoginScreen> {
                                   Text(
                                     'Login',
                                     style: TextStyle(
-                                      fontSize: heightsize * 0.03,
-                                      color: Colors.white,
+                                      fontSize: heightsize * 0.04,
+                                      color: ResponsiveWidget.isSmallScreen(
+                                              context)
+                                          ? Colors.white
+                                          : Colors.black,
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
@@ -148,8 +160,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         const SizedBox(height: 70),
                         Padding(
                           padding: ResponsiveWidget.isSmallScreen(context)
-                              ? EdgeInsets.only(right: 0)
-                              : EdgeInsets.only(right: 30),
+                              ? const EdgeInsets.only(right: 0)
+                              : const EdgeInsets.only(right: 30),
                           child: Container(
                             height: heightsize * 0.7,
                             decoration: BoxDecoration(
